@@ -52,7 +52,9 @@ Support Vector Machines:
 - Gamma Value
 - weights associated with classes
 
-For each of these models we run a pipeline that contains the transformer into a grid search testing on accuracy which utilizes 5 cross validation splits. Each model goes through the grid search before finding the best parameters and running a final pipeline with them fitted on the train data against the test data.
+For each of these models we run a pipeline that contains the transformer into a grid search testing on accuracy which utilizes 5 cross validation splits. Each model goes through the grid search before finding the best parameters and running a final pipeline with them fitted on the train data against the test data. For further details on these parameters chosen, please refer to the jupyter notebook.
+
+The first main notice of the results found was that none of the models were able to outperform the baseline. As with default parameters, Logistic and Support Vector Machine had the same training and testing accuracy despite the hyper tuning. A further look at the parameters chosen on these 2 models showcases that most of the default parameters were chosen as best during the hypertuning. Decision Tree was a model that was improven from default settings but the training and testing accuracy were still the same as the baseline. The only model not identical to the baseline was k nearest neighbors, where hyper tuning assisted it with lower levels of overfitting but its testing accuracy was still worse. As for training time, logistic took an increase letting Decision Tree be the new best model of the 4 with the highest accuracy and shortest time at 0.198 seconds.
 
 
 ## Conclusion and Next Steps
